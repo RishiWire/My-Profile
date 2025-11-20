@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rishi Raj Singh Somvanshi | Marketing Automation Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Rishi Raj Singh Somvanshi — Manager, Marketing Automation, driving engagement and growth with CRM strategy."
+  />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --card: #111827;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.15);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.7);
+      --radius-xl: 18px;
+      --radius-full: 999px;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #111827 0, #020617 50%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 48px;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .logo-mark-badge {
+      width: 22px;
+      height: 22px;
+      border-radius: 10px;
+      background: radial-gradient(circle at 30% 20%, #4ade80, #16a34a 40%, #052e16 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #e5e7eb;
+      box-shadow: 0 0 20px rgba(74, 222, 128, 0.5);
+    }
+
+    .pill {
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 4px 12px;
+      font-size: 11px;
+      color: var(--muted);
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(18px);
+    }
+
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.75);
+    }
+
+    .pill-text-strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1.2fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Left column */
+    .hero-card {
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      border-radius: 26px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 22px 22px 20px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.26), transparent 55%);
+      opacity: 0.7;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tag-chip {
+      border-radius: var(--radius-full);
+      padding: 4px 10px;
+      font-size: 11px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(16px);
+    }
+
+    /* NAME + AVATAR ROW */
+    .hero-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-header-text {
+      flex: 1 1 auto;
+      min-width: 200px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .name-highlight {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #a7f3d0;
+      font-weight: 500;
+    }
+
+    .title {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .location {
+      font-size: 12px;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .location span {
+      font-size: 16px;
+    }
+
+    /* AVATAR STYLES */
+    .hero-avatar-wrapper {
+      flex: 0 0 auto;
+    }
+
+    .avatar-link {
+      display: inline-flex;
+      border-radius: 50%;
+      padding: 3px;
+      background: radial-gradient(circle at 30% 20%, #4ade80, #22c55e 40%, #111827 100%);
+      box-shadow: 0 0 22px rgba(34, 197, 94, 0.5);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+    }
+
+    .avatar-link:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 0 32px rgba(34, 197, 94, 0.75);
+      filter: brightness(1.05);
+    }
+
+    .hero-avatar {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(15, 23, 42, 0.9);
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      .hero-avatar {
+        width: 72px;
+        height: 72px;
+      }
+    }
+
+    .summary {
+      font-size: 13px;
+      color: #d1d5db;
+      margin-bottom: 18px;
+    }
+
+    .summary p + p {
+      margin-top: 8px;
+    }
+
+    .hero-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6b7280;
+      min-width: 52px;
+    }
+
+    .contact-value a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    .contact-value a:hover {
+      text-decoration: underline;
+      color: var(--accent);
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border-radius: var(--radius-full);
+      padding: 9px 16px;
+      font-size: 12px;
+      border: 1px solid transparent;
+      background: var(--accent);
+      color: #022c22;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.35);
+      transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(34, 197, 94, 0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.5);
+      color: var(--text);
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: rgba(15, 23, 42, 0.9);
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.8);
+    }
+
+    .btn-icon {
+      font-size: 14px;
+    }
+
+    /* Right column sections */
+    .column-right {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .section-card {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      padding: 16px 16px 14px;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.9);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+    }
+
+    .section-kicker {
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    /* Experience */
+    .timeline {
+      position: relative;
+      padding-left: 10px;
+      margin-left: 6px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      bottom: 4px;
+      left: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, #22c55e, transparent);
+      opacity: 0.4;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 14px;
+      padding-bottom: 14px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-bullet {
+      position: absolute;
+      left: -4px;
+      top: 3px;
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.13);
+    }
+
+    .role-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 2px;
+    }
+
+    .role-company {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 2px;
+    }
+
+    .role-meta {
+      font-size: 11px;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .bullet-list {
+      list-style: none;
+      font-size: 11.5px;
+      color: #d1d5db;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 4px;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #6ee7b7;
+      font-size: 10px;
+    }
+
+    /* Skills & Certifications */
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-chip {
+      border-radius: var(--radius-full);
+      padding: 4px 10px;
+      font-size: 11px;
+      background: rgba(15, 23, 42, 1);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: #e5e7eb;
+      white-space: nowrap;
+    }
+
+    .skill-chip-strong {
+      background: var(--accent-soft);
+      border-color: rgba(34, 197, 94, 0.7);
+      color: #bbf7d0;
+    }
+
+    .cert-list {
+      list-style: none;
+      font-size: 11.5px;
+      color: #e5e7eb;
+      display: grid;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .cert-item-title {
+      font-weight: 500;
+    }
+
+    /* Education */
+    .edu-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .edu-degree {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .edu-meta {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* Footer */
+    .page-footer {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      font-size: 10.5px;
+      color: #6b7280;
+    }
+
+    .page-footer span strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .page-footer a {
+      font-weight: 500;
+    }
+
+    @media (max-width: 640px) {
+      .hero-card {
+        padding: 18px 15px;
+      }
+      .page {
+        padding: 20px 12px 30px;
+      }
+      .name {
+        font-size: 22px;
+      }
+      .hero-header {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="shell">
+      <header class="top-bar">
+        <div class="logo-mark">
+          <div class="logo-mark-badge">RR</div>
+          <span>Marketing Automation</span>
+        </div>
+        <div class="pill">
+          <span class="pill-dot"></span>
+          <span class="pill-text-strong">Open to CRM & Lifecycle roles</span>
+        </div>
+      </header>
+
+      <section class="layout">
+        <!-- LEFT: Hero / Summary -->
+        <article class="hero-card">
+          <div class="hero-inner">
+            <div class="tag-row">
+              <span class="tag-chip">Manager · Marketing Automation</span>
+              <span class="tag-chip">CRM Strategy · Retention · Engagement</span>
+            </div>
+
+            <!-- NAME + AVATAR ROW -->
+            <div class="hero-header">
+              <div class="hero-header-text">
+                <div class="name">
+                  <span>Rishi Raj Singh Somvanshi</span>
+                  <span class="name-highlight">CRM-First Growth</span>
+                </div>
+                <p class="title">
+                  Driving engagement &amp; revenue with data-driven lifecycle marketing and CRM automation.
+                </p>
+              </div>
+
+              <div class="hero-avatar-wrapper">
+                <a
+                  class="avatar-link"
+                  href="https://www.linkedin.com/in/rishi-raj-singh-somvanshi-76058370"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View LinkedIn profile"
+                >
+                  <img
+                    src="profile.jpg"
+                    alt="Rishi Raj Singh Somvanshi"
+                    class="hero-avatar"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <p class="location">
+              <span>📍</span> Pune, Maharashtra, India
+            </p>
+
+            <div class="summary">
+              <p>
+                At ReBid and previously DWAO, I specialize in leveraging CRM tools and analytics to enhance
+                customer experiences and unlock growth. I design and deploy personalized, multi-channel
+                campaigns powered by actionable insights from custom dashboards.
+              </p>
+              <p>
+                With a Master’s in Marketing and hands-on expertise across CleverTap, MoEngage, and other
+                martech tools, I focus on customer segmentation, content recommendation, and automation-led
+                journeys that improve retention, engagement, and LTV.
+              </p>
+            </div>
+
+            <div class="hero-footer">
+              <div class="contact-list">
+                <div class="contact-item">
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">
+                    <a href="mailto:rishi.chester@gmail.com">rishi.chester@gmail.com</a>
+                  </span>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">
+                    <a
+                      href="https://www.linkedin.com/in/rishi-raj-singh-somvanshi-76058370"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      /in/rishi-raj-singh-somvanshi-76058370
+                    </a>
+                  </span>
+                </div>
+              </div>
+
+              <div class="cta-group">
+                <a
+                  class="btn"
+                  href="mailto:rishi.chester@gmail.com?subject=Opportunity%20for%20Marketing%20Automation%20Role"
+                >
+                  <span class="btn-icon">✉️</span>
+                  <span>Contact Me</span>
+                </a>
+
+                <a
+                  class="btn btn-outline"
+                  href="https://www.linkedin.com/in/rishi-raj-singh-somvanshi-76058370"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="btn-icon">🔗</span>
+                  <span>View LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- RIGHT: Details -->
+        <div class="column-right">
+          <!-- Experience -->
+          <section class="section-card">
+            <div class="section-header">
+              <h2 class="section-title">Experience</h2>
+              <span class="section-kicker">7+ years across CRM, Digital & Analytics</span>
+            </div>
+
+            <div class="timeline">
+              <!-- ReBid -->
+              <article class="timeline-item">
+                <div class="timeline-bullet"></div>
+                <div class="role-title">
+                  <span>Marketing Automation Manager</span>
+                  <span>Nov 2024 – Present</span>
+                </div>
+                <div class="role-company">ReBid · Mumbai, Maharashtra, India</div>
+                <div class="role-meta">CRM · Lifecycle · Automation · Analytics</div>
+                <ul class="bullet-list">
+                  <li>Own end-to-end marketing automation to drive engagement and revenue.</li>
+                  <li>Design data-driven customer journeys across key lifecycle stages.</li>
+                  <li>Collaborate with growth, product, and sales teams to align CRM goals with business KPIs.</li>
+                </ul>
+              </article>
+
+              <!-- DWAO -->
+              <article class="timeline-item">
+                <div class="timeline-bullet"></div>
+                <div class="role-title">
+                  <span>Senior Associate</span>
+                  <span>Jan 2022 – Oct 2024</span>
+                </div>
+                <div class="role-company">DWAO · Pune</div>
+                <div class="role-meta">Clients: Tanishq, SpiceJet, Plix, udChalo</div>
+                <ul class="bullet-list">
+                  <li>Led CRM strategy and campaign execution for marquee clients across industries.</li>
+                  <li>Hands-on expert in CleverTap &amp; MoEngage for segmentation, journey design, and orchestration.</li>
+                  <li>Owned end-to-end campaigns: ideation, experimentation, deployment, and performance optimization.</li>
+                  <li>Built custom dashboards to surface actionable insights and guide decision-making.</li>
+                  <li>Specialized in personalized campaigns, content recommendations, and discovery workshops.</li>
+                  <li>Conducted UAT testing and managed ad-hoc CRM campaigns for rapid GTM.</li>
+                </ul>
+              </article>
+
+              <!-- udChalo -->
+              <article class="timeline-item">
+                <div class="timeline-bullet"></div>
+                <div class="role-title">
+                  <span>Digital Marketing Manager</span>
+                  <span>Mar 2021 – Jan 2022</span>
+                </div>
+                <div class="role-company">udChalo™ · Pune</div>
+                <div class="role-meta">360° Marketing · CRM · Brand</div>
+                <ul class="bullet-list">
+                  <li>Drove website traffic, app downloads, and engagement via digital and offline activities.</li>
+                  <li>Owned the 360° yearly marketing calendar: social, launches, influencers, sponsorships, PR &amp; brand collabs.</li>
+                  <li>Managed ATL, BTL, and digital activations to support growth and brand objectives.</li>
+                  <li>Ideated creatives for billboards, banners, standees, and offline sponsorship assets.</li>
+                  <li>
+                    Owned MoEngage &amp; Netcore CRM: push, email, SMS, in-app, and on-site campaigns for promotional and
+                    trigger-based journeys.
+                  </li>
+                  <li>Managed Voucherify for bulk &amp; unique coupon creation to support tactical growth initiatives.</li>
+                </ul>
+              </article>
+
+              <!-- Mirror Review -->
+              <article class="timeline-item">
+                <div class="timeline-bullet"></div>
+                <div class="role-title">
+                  <span>SEO Analyst</span>
+                  <span>Jul 2019 – Feb 2021</span>
+                </div>
+                <div class="role-company">Mirror Review · Pune Area, India</div>
+                <div class="role-meta">On-Page · Off-Page · Analytics</div>
+                <ul class="bullet-list">
+                  <li>Owned end-to-end SEO strategy from keyword research to on-page and off-page execution.</li>
+                  <li>Optimized product pages in line with Google algorithms; coordinated with developers for SEO-friendly builds.</li>
+                  <li>Implemented meta tags, header tags, content and image optimization, XML sitemaps, schema markup, robots.txt, and 404 handling.</li>
+                  <li>Led off-page initiatives: link building, blogging, directory submissions, social bookmarking, and PR promotion.</li>
+                  <li>Used Google Analytics &amp; Search Console to track performance and refine strategy.</li>
+                  <li>Handled email marketing via Mailchimp and managed social media copy &amp; YouTube content.</li>
+                </ul>
+              </article>
+
+              <!-- PRGX -->
+              <article class="timeline-item">
+                <div class="timeline-bullet"></div>
+                <div class="role-title">
+                  <span>Auditor</span>
+                  <span>Jun 2016 – Oct 2017</span>
+                </div>
+                <div class="role-company">PRGX · Pune, Maharashtra, India</div>
+                <div class="role-meta">Audit · Data Review · Process Quality</div>
+                <ul class="bullet-list">
+                  <li>Reviewed client information, vendor deals, invoices, and credit memos for accuracy.</li>
+                  <li>Prepared detailed deduction request forms and credit descriptions for retail clients.</li>
+                  <li>Supported production and quality checks while mentoring junior auditors.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <!-- Skills & Certifications -->
+          <section class="section-card">
+            <div class="section-header">
+              <h2 class="section-title">Core Skills & Certifications</h2>
+              <span class="section-kicker">CRM · Segmentation · Analytics</span>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+              <p style="font-size: 11.5px; color: #d1d5db; margin-bottom: 6px;">
+                I focus on building high-impact lifecycle programs that connect acquisition to retention, using data to
+                personalize every touchpoint.
+              </p>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+              <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: #6b7280; margin-bottom: 6px;">
+                Top Skills
+              </div>
+              <div class="chip-row">
+                <span class="skill-chip skill-chip-strong">Customer Retention</span>
+                <span class="skill-chip skill-chip-strong">Customer Journey Mapping</span>
+                <span class="skill-chip skill-chip-strong">Customer Segmentation Strategy</span>
+
+                <span class="skill-chip">Lifecycle Marketing</span>
+                <span class="skill-chip">Campaign Strategy &amp; Execution</span>
+                <span class="skill-chip">Personalized Campaigns</span>
+                <span class="skill-chip">Content Recommendation</span>
+                <span class="skill-chip">CleverTap</span>
+                <span class="skill-chip">MoEngage</span>
+                <span class="skill-chip">Netcore</span>
+                <span class="skill-chip">Dashboards &amp; Reporting</span>
+                <span class="skill-chip">Marketing Analytics</span>
+                <span class="skill-chip">SEO &amp; Web Analytics</span>
+                <span class="skill-chip">Email &amp; Push Journeys</span>
+              </div>
+            </div>
+
+            <div>
+              <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: #6b7280; margin-bottom: 4px;">
+                Certifications
+              </div>
+              <ul class="cert-list">
+                <li>
+                  <span class="cert-item-title">Growth Marketing Expert</span>
+                </li>
+                <li>
+                  <span class="cert-item-title">Fundamentals of Digital Marketing</span>
+                </li>
+                <li>
+                  <span class="cert-item-title">Advanced Social Media Strategy – Training &amp; Certification</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Education -->
+          <section class="section-card">
+            <div class="section-header">
+              <h2 class="section-title">Education</h2>
+              <span class="section-kicker">Marketing Foundation</span>
+            </div>
+
+            <ul class="edu-list">
+              <li>
+                <div class="edu-degree">Master's Degree, Marketing</div>
+                <div class="edu-meta">Symbiosis College of Arts &amp; Commerce · 2016 – 2018</div>
+              </li>
+              <li>
+                <div class="edu-degree">Bachelor's Degree, Marketing</div>
+                <div class="edu-meta">Symbiosis College of Arts &amp; Commerce · 2012 – 2015</div>
+              </li>
+              <li>
+                <div class="edu-degree">Schooling</div>
+                <div class="edu-meta">Army Public School, Nehru Road, Lucknow</div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <span>© <strong>Rishi Raj Singh Somvanshi</strong> · Marketing Automation &amp; CRM Strategy</span>
+        <span>
+          Built from LinkedIn profile ·
+          <a href="mailto:rishi.chester@gmail.com">Let’s talk</a>
+        </span>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
